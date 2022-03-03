@@ -93,7 +93,7 @@ def turnmusic():
     global music 
     if music: 
         music = False
-        if not pygame.mixer.get_init():
+        if pygame.mixer.get_init():
             pygame.mixer.music.pause()
     else:
         music = True

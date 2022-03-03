@@ -1,3 +1,4 @@
+from pickle import TRUE
 import pyfirmata
 import time
 import threading
@@ -16,7 +17,7 @@ def startPP():
 
 def party():
     global pp
-    if pp:
+    while True:
         board.digital[GREEN_LED].write(0)
         board.digital[BLUE_LED].write(0)
         time.sleep(1)
